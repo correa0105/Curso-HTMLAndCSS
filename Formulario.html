@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .formulario{
+            background: gray;
+            width: 30%;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .cabeçalhoLead{
+            text-align: center;
+            padding: 4px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input, select{
+            margin: auto;
+            display: block;
+        }
+
+        .botoes{
+            display: block;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        body div form p label, select{
+            display: block;
+            font-size: 8px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            font-family: sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+        .prenderlabel{
+            text-align: left;
+            margin-left: 20%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="formulario">
+    <form action="#" method="get" autocomplete="off">
+
+    <p class="cabeçalhoLead">Inimigos do Sono</p>
+    <p>
+        <label class="prenderlabel" for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        <label class="prenderlabel" for="contato">Contato</label>
+        <input type="tel" id="contato" name="contato" placeholder="Seu numero contato">
+        <label class="prenderlabel" for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email">
+        <label class="prenderlabel" for="regiao">Cidade</label>        
+        <input type="text" id="regiao" name="regiao" placeholder="Regiao">
+        <label class="prenderlabel" for="dorme" style="margin-left: auto; text-align: center; font-size: 8px;">Marque a caixa se você dorme depois das 5:00am</label>
+        <input type="checkbox" id="dorme" name="dorme" value="sim" placeholder="Regiao">
+    </p>
+    <p>
+        <label for="date" style="margin-left: auto; text-align: center; font-size: 8px;">Data de preenchimento</label>
+        <input type="date" name="date" id="date">
+    </p>
+    <p>
+        <label for="color" style="margin-left: auto; text-align: center; font-size: 8px;">Cor preferida</label>
+        <input type="color" name="color" id="color">
+    </p>
+    <p>
+        <label for="file" style="margin-left: auto; text-align: center; font-size: 8px;">Faça upload de um arquivo</label>
+        <input style="font-size: 7px; " type="file" name="file" id="file" accept=".png, .svg, image/*" multiple>
+    </p>
+    <p>
+        <label for="password" style="margin-left: auto; text-align: center; font-size: 8px;">Digite sua senha</label>
+        <input style="font-size: 7px; " type="password" name="password" id="password" placeholder="Sua senha aqui">
+    </p>
+    <p> 
+        <input type="range" list="tickmarks">
+        <datalist id="tickmarks">
+            <option value="0" label="0%">
+            <option value="10">
+            <option value="20">
+            <option value="30">
+            <option value="40">
+            <option value="50" label="50%">
+            <option value="60">
+            <option value="70">
+            <option value="80">
+            <option value="90">
+            <option value="100" label="100%">
+        </datalist>
+    </p>
+    <p>
+        <label for="select" style="margin-left: auto; text-align: center; font-size: 8px;">Oque você é</label>
+        <select style="color: black" id="select">
+        <optgroup label="Sinforosos">
+        <option value="1" label="Gay">
+        <option value="1" label="Sinforoso">
+        <option value="1" label="Xalalau"></option>
+        </optgroup>
+        <optgroup label="Filipinos">
+        <option value="1" label="Mascote">
+        <option value="1" label="Nescau Sereal">
+        <option value="1" label="Maracanjuba">
+        </optgroup>
+        </select>
+    </p>
+    <p class="botoes">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </p>
+    </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        table td, table th{
+            padding: 8px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 1000px;
+            margin: auto;
+        }
+
+        table caption{
+            caption-side: top;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;         
+        }
+
+        tfoot td{
+            background: rgba(201, 195, 195, 0.349);
+        }
+        
+        .barraPrincipal{
+            background: rgb(113, 200, 226);;
+        }
+
+        .responsive-table{
+            max-width: 100%;
+            overflow: auto;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit.</p>
+    <div class="responsive-table"> 
+    <table>
+        <caption>Controle de Compras</caption>
+        <thead>
+            <tr>
+                <th class="barraPrincipal" colspan="3" rowspan="">Planilha Totalizadora</th>
+            </tr>
+            <tr>
+                <th>Item</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>        
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Celular</td>
+                <td>Motorola G5</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Headset</td>
+                <td>Headset Razer Stereo</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>Corsair</td>
+                <td>110</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>R$1310,00</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    </div> 
+</body>
+</html>
