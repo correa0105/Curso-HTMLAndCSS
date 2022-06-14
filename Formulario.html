@@ -4,124 +4,159 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
 
     <style>
         
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         .formulario{
+            display: flex;
+            flex-flow: column wrap;
+            width: 25rem;
+            margin: 0 auto;
+            padding: 3rem;
+            justify-content: center;
             background: gray;
-            width: 30%;
-            margin: auto;
             border: 2px solid black;
             border-radius: 5px;
         }
 
-        .cabeçalhoLead{
+        .form-groupInput {
+            flex-flow: column wrap;
+            margin-top: 0.2rem;
+            align-items: center;
+        }
+
+        .form-groupInput label {
+            display: block;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .form-groupInput input {
+            display: block;
+            min-width: 100%;
+            height: 1.3rem;
+            padding: 0.1rem;
+        }
+
+        .formulario h1 {
             text-align: center;
-            padding: 4px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        input, select{
-            margin: auto;
-            display: block;
+        .form-groupType {
+            flex-flow: column wrap;
+            margin-top: 1rem;
         }
 
-        .botoes{
+        .form-groupType label {
             display: block;
             text-align: center;
-            padding-bottom: 10px;
-        }
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+        }   
 
-        body div form p label, select{
+        .form-groupType input, .form-groupType select {
             display: block;
-            font-size: 8px;
-            margin-top: 5px;
-            margin-bottom: 2px;
-            font-family: sans-serif;
-            color: rgb(255, 255, 255);
+            margin: 0 auto;
         }
 
-        .prenderlabel{
-            text-align: left;
-            margin-left: 20%;
+        .botoes {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
         }
 
+        .botoes button {
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
 
     </style>
 
 </head>
 <body>
 
-    <div class="formulario">
+    <section class="formulario">
     <form action="#" method="get" autocomplete="off">
-
-    <p class="cabeçalhoLead">Inimigos do Sono</p>
-    <p>
-        <label class="prenderlabel" for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
-        <label class="prenderlabel" for="contato">Contato</label>
-        <input type="tel" id="contato" name="contato" placeholder="Seu numero contato">
-        <label class="prenderlabel" for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Email">
-        <label class="prenderlabel" for="regiao">Cidade</label>        
-        <input type="text" id="regiao" name="regiao" placeholder="Regiao">
-        <label class="prenderlabel" for="dorme" style="margin-left: auto; text-align: center; font-size: 8px;">Marque a caixa se você dorme depois das 5:00am</label>
-        <input type="checkbox" id="dorme" name="dorme" value="sim" placeholder="Regiao">
-    </p>
-    <p>
-        <label for="date" style="margin-left: auto; text-align: center; font-size: 8px;">Data de preenchimento</label>
-        <input type="date" name="date" id="date">
-    </p>
-    <p>
-        <label for="color" style="margin-left: auto; text-align: center; font-size: 8px;">Cor preferida</label>
-        <input type="color" name="color" id="color">
-    </p>
-    <p>
-        <label for="file" style="margin-left: auto; text-align: center; font-size: 8px;">Faça upload de um arquivo</label>
-        <input style="font-size: 7px; " type="file" name="file" id="file" accept=".png, .svg, image/*" multiple>
-    </p>
-    <p>
-        <label for="password" style="margin-left: auto; text-align: center; font-size: 8px;">Digite sua senha</label>
-        <input style="font-size: 7px; " type="password" name="password" id="password" placeholder="Sua senha aqui">
-    </p>
-    <p> 
-        <input type="range" list="tickmarks">
-        <datalist id="tickmarks">
-            <option value="0" label="0%">
-            <option value="10">
-            <option value="20">
-            <option value="30">
-            <option value="40">
-            <option value="50" label="50%">
-            <option value="60">
-            <option value="70">
-            <option value="80">
-            <option value="90">
-            <option value="100" label="100%">
-        </datalist>
-    </p>
-    <p>
-        <label for="select" style="margin-left: auto; text-align: center; font-size: 8px;">Oque você é</label>
-        <select style="color: black" id="select">
-        <optgroup label="Sinforosos">
-        <option value="1" label="Gay">
-        <option value="1" label="Sinforoso">
-        <option value="1" label="Xalalau"></option>
-        </optgroup>
-        <optgroup label="Filipinos">
-        <option value="1" label="Mascote">
-        <option value="1" label="Nescau Sereal">
-        <option value="1" label="Maracanjuba">
-        </optgroup>
-        </select>
-    </p>
-    <p class="botoes">
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpar</button>
-    </p>
+        <h1>Inimigos do Sono</h1>
+        <div class="form-groupInput">
+            <label class="prenderlabel" for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="form-groupInput">
+            <label class="prenderlabel" for="contato">Contato</label>
+            <input type="tel" id="contato" name="contato" placeholder="Seu numero contato">
+        </div>
+        <div class="form-groupInput">
+            <label class="prenderlabel" for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="form-groupInput">
+            <label class="prenderlabel" for="regiao">Cidade</label>        
+            <input type="text" id="regiao" name="regiao" placeholder="Regiao">
+        </div>
+        <div class="form-groupType">
+            <label class="prenderlabel" for="checkbox">Marque a caixa se você dorme depois das 5:00am</label>
+            <input type="checkbox" id="checkbox" name="checkbox" value="sim" placeholder="Regiao">
+        </div>
+        <div class="form-groupType">
+            <label for="date">Data de preenchimento</label>
+            <input type="date" name="date" id="date">
+        </div>   
+        <div class="form-groupType">
+            <label for="color">Cor preferida</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div class="form-groupType">
+            <label for="file">Faça upload de um arquivo</label>
+            <input type="file" name="file" id="file" accept=".png, .svg, image/*" multiple>
+        </div>
+        <div class="form-groupType">
+            <label for="password">Digite sua senha</label>
+            <input type="password" name="password" id="password" placeholder="Sua senha aqui">
+        </div>
+        <div class="form-groupType">
+            <input type="range" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+        </div>
+        <div class="form-groupType">
+            <label for="select">Selecione uma opção</label>
+            <select id="select">
+                <optgroup label="Sinforosos">
+                    <option value="1" label="Option1">
+                    <option value="1" label="Option2">
+                    <option value="1" label="Option3"></option>
+                </optgroup>
+                <optgroup label="Filipinos">
+                    <option value="1" label="Option4">
+                    <option value="1" label="Option5">
+                    <option value="1" label="Option6">
+                </optgroup>
+            </select>
+        </div>
+        <div class="botoes">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
     </form>
-    </div>
+    </section>
 
 </body>
 </html>
